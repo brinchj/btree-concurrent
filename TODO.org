@@ -1,16 +1,23 @@
-* Small things
+* Smaller things:
 ** Fix the code to give fewer warnings when compiled with -Wall
 
+   There are tons of small things in the code that spit out warnings in GHC or
+   hlint.  Fixing this would likely improve code quality a bit.
+
 ** Update this TODO
+   There is probably more things to do that aren't named in here.
 
 
-* Large things
-** Consider specialising the btree with bytestring as key to avoid serialize/deserialze.
+* Larger things:
+** Consider specialising the btree with bytestring as key to avoid
+   serialize/deserialze.
+
   This could give lower memory usage, since nodes could remains as packed
   bytestrings at all times. Some c-functions could be introduce to manipulate
   these in an safe yet efficient way (copy on change).
 
 ** Complete the implementations of findMin and findMax.
+
   Currently, min and max values can only be located if they reside in an
   outermost leaf. Due to the nature of eventual-balance and lazy rebalancing
   this is not always the case. The outermost leaf could be empty.

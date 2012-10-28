@@ -9,8 +9,7 @@
 
 
 * Larger things:
-** Consider specialising the btree with bytestring as key to avoid
-   serialize/deserialze.
+** Should we only allow bytestring as key to avoid serialize/deserialze?
 
   This could give lower memory usage, since nodes could remains as packed
   bytestrings at all times. Some c-functions could be introduce to manipulate

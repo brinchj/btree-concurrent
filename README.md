@@ -2,11 +2,10 @@ btree-concurrent
 ================
 
 
-A backend agnostic, concurrent BTree with relaxed balance[1] written in Haskell using STM.
+A backend agnostic, concurrent BTree with relaxed balance[1] written in Haskell using a mix of IO operations and pure STM.
 
 
-Although the code does work, it is neither production-ready nor complete. See
-the TODO.org file for more details on missing parts.
+Although the code does work, it is neither production-ready nor complete.
 
 
 Features include:

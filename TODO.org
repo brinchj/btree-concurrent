@@ -12,8 +12,8 @@
 ** Should we only allow bytestring as key to avoid serialize/deserialze?
 
   This could give lower memory usage, since nodes could remains as packed
-  bytestrings at all times. Some c-functions could be introduce to manipulate
-  these in an safe yet efficient way (copy on change).
+  bytestrings at all times. Some c-functions could be introduced to manipulate
+  these in a safe yet efficient way (copy on change).
 
 ** Complete the implementations of findMin and findMax.
 

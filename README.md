@@ -1,4 +1,4 @@
 btree-concurrent
 ================
 
-A backend agnostic, concurrent BTree written in Haskell
+A backend agnostic, concurrent BTree written in Haskell.

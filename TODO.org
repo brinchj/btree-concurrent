@@ -1,0 +1,19 @@
+* Small things
+** Fix the code to give fewer warnings when compiled with -Wall
+
+** Update this TODO
+
+
+* Large things
+** Consider specialising the btree with bytestring as key to avoid serialize/deserialze.
+  This could give lower memory usage, since nodes could remains as packed
+  bytestrings at all times. Some c-functions could be introduce to manipulate
+  these in an safe yet efficient way (copy on change).
+
+** Complete the implementations of findMin and findMax.
+  Currently, min and max values can only be located if they reside in an
+  outermost leaf. Due to the nature of eventual-balance and lazy rebalancing
+  this is not always the case. The outermost leaf could be empty.
+
+
+

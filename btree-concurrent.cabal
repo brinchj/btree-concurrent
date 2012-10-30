@@ -1,10 +1,11 @@
 name:               btree-concurrent
-version:            0.1.0
+version:            0.1.1
 homepage:           https://github.com/brinchj/btree-concurrent
 synopsis:           A backend agnostic, concurrent BTree
 description:        A backend agnostic, concurrent BTree
 category:           Data Structures
 license:            LGPL
+license-file:       LICENSE
 author:             Morten Brøns, Johan Brinch
 maintainer:         brinchj@gmail.com
 data-files:         README.md TODO.org
@@ -40,7 +41,7 @@ Test-Suite quickcheck-highlevel
         snappy == 0.2.*
         ,
         -- bytestring
-        bytestring == 0.9.*, base16-bytestring == 0.1.*, base64-bytestring == 0.1.*,
+        bytestring >= 0.9, base16-bytestring == 0.1.*, base64-bytestring == 0.1.*,
         cereal == 0.3.*
         ,
         -- files
@@ -85,7 +86,7 @@ library
         snappy == 0.2.*
         ,
         -- bytestring
-        bytestring == 0.9.*, base16-bytestring == 0.1.*, base64-bytestring == 0.1.*,
+        bytestring >= 0.9, base16-bytestring == 0.1.*, base64-bytestring == 0.1.*,
         cereal == 0.3.*
         ,
         -- files

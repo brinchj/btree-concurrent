@@ -1,5 +1,5 @@
 name:               btree-concurrent
-version:            0.1.3
+version:            0.1.4
 homepage:           https://github.com/brinchj/btree-concurrent
 synopsis:           A backend agnostic, concurrent BTree
 description:        A backend agnostic, concurrent BTree

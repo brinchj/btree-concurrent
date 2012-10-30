@@ -10,9 +10,14 @@ author:             Morten Brøns, Johan Brinch
 maintainer:         brinchj@gmail.com
 data-files:         README.md TODO.org
 cabal-version:      >= 1.8
+tested-with:        GHC == 7.6.1
 build-type:         Custom
 stability:          Experimental
 
+
+source-repository head
+    type: git
+    location: https://github.com/brinchj/btree-concurrent.git
 
 
 Test-Suite quickcheck-highlevel

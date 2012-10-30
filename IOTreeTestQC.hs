@@ -8,6 +8,7 @@ import Control.Concurrent
 import Control.Monad
 import Control.Monad.Trans
 
+import System.Random (randomRIO)
 import Data.Word
 
 import qualified Data.ByteString.Char8 as B
@@ -189,7 +190,9 @@ behaves_like_map_prop dir root =
 
 
 main = do
+  stamp <- randomRIO (0 :: Int, 0xFFFFFFFF)
   let args = stdArgs {maxSuccess = 30, maxSize = 5000}
+  let dir  = "test-btree-conc-tmp-" ++ show stamp
   createDirectory dir 493
   -- Create an empty tree
   c <- Cstm.sizedParam 8 $ Files.evalFilesKV dir
@@ -197,6 +200,5 @@ main = do
   r <- T.execTree p T.save
   root <- newMVar r
   quickCheckWithResult args $ behaves_like_map_prop dir root
-  where
-    dir  = "btree-conc-test-tmp"
+
 
